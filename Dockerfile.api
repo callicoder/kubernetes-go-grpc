@@ -1,0 +1,13 @@
+FROM golang:1.9.1
+
+# Change this path!
+WORKDIR /go/src/github.com/callicoder/kubernetes-go-grpc/api
+COPY api .
+COPY pb ../pb
+
+RUN go get -v ./...
+RUN go install -v ./...
+
+EXPOSE 3000
+
+CMD [ "api" ]
