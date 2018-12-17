@@ -7,6 +7,8 @@ import (
 	"strconv"
 
 	"github.com/callicoder/kubernetes-go-grpc/pb"
+	"github.com/gin-gonic/gin"
+	"google.golang.org/grpc"
 )
 
 func main() {
